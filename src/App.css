@@ -1,38 +1,165 @@
-.App {
+@font-face {
+  font-family: 'Valera';
+  src: url('assets/VarelaRound-Regular.ttf');
+}
+
+body {
+  text-align: center;
+  color: #282c34;
+  font-family: Valera;
+}
+
+input {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1.2em;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Valera;
+  color: #555
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+nav {
+  display: flex;
+  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  display: flex;
+}
+
+.title {
+  padding-left: 10px;
+  font-family: 'Acme';
+  font-size: 20px;
+}
+
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 3em 1em;
+}
+
+.answer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.random-word {
+  font-size: 2em;
+  color: #b13129;
+  text-transform: uppercase;
+}
+
+.random-word.correct {
+  color: #46a156;
+}
+
+.submit-btn {
+  padding: 10px;
+  font-size: 1.2em;
+  background-color: #ffef4a;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #282c34;
+  margin-top: 2em;
+  font-family: Valera;
+}
+
+.submit-reset {
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #d9534f;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.submit-new {
+  cursor: pointer;
+  color: green
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.reset img {
+  padding-top: 10px;
+  margin-right: 10px;
+}
+
+.meaning {
+  padding: 20px 0;
+  /* font-size: 1.5em; */
+}
+
+.word {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.speaker-icon {
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.no-display {
+  display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.speech {
+  color: #45474b;
+  font-style: italic;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.score {
+  font-size: 1.3em;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score span {
+  color: #1f63b4;
+  font-weight: 900;
 }
